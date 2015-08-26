@@ -3,6 +3,9 @@ package br.unibh.teste01;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import br.unibh.teste01.entidades.Aluno;
+import br.unibh.teste01.entidades.Professor;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -31,6 +34,10 @@ public class Main {
 						  new BigDecimal(1000));
 		
 		System.out.println(prof1);
+		
+		System.out.println(prof1.getSalario());
+		
+		System.out.println(Professor.BONUS);
 		
 	}
 
