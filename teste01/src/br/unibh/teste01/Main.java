@@ -1,10 +1,14 @@
 package br.unibh.teste01;
 
 import java.math.BigDecimal;
+import java.sql.Connection;
 import java.util.Date;
+import java.util.List;
 
 import br.unibh.teste01.entidades.Aluno;
 import br.unibh.teste01.entidades.Professor;
+import br.unibh.teste01.persistence.AlunoDAO;
+import br.unibh.teste01.persistence.JDBCUtil;
 
 public class Main {
 
@@ -38,6 +42,20 @@ public class Main {
 		System.out.println(prof1.getSalario());
 		
 		System.out.println(Professor.BONUS);
+		
+		try {
+			
+			Connection c = JDBCUtil.getConnection();
+			
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		
+		AlunoDAO dao = new AlunoDAO();
+		List<Aluno> lista = dao.findAll();
+		for (Aluno a: lista){
+			System.out.println(a);
+		}
 		
 	}
 
