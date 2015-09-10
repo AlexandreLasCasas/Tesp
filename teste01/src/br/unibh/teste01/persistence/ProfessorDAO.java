@@ -9,10 +9,10 @@ import br.unibh.teste01.entidades.Professor;
 
 public class ProfessorDAO implements DAO<Professor, Long> {
 
+	// Identação do código = ctrl + shif + f
 	//public static DecimalFormat dc = new DecimalFormat("00000000000000.00");
-	// coltr+shif+f Formata o codigo
 	// Professor , Long e subustituido por T e K na classe DAO
-	// T e K e curinga pra chamar a Classe e o parametro geralmente ID da classe
+	// T e K e coringa para poder chamar a Classe e o parâmetro que é geralmente o ID da classe
 
 	@Override
 	public Professor find(Long id) {

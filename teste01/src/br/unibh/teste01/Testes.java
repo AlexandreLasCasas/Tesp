@@ -38,15 +38,15 @@ public class Testes {
 		AlunoDAO dao = new AlunoDAO();
 		Aluno a = new Aluno(null,"beltrano", "79312382312", "24234234",new Date());
 		
-		dao.insert(a); //vai inserir o objeto a que sãos os dados acima de aluno
+		dao.insert(a); //Inserirá o objeto aos dados acima de aluno
 		
-		Aluno b = dao.find("beltrano"); // vai selecionar atraves do ID e trazer o nome
+		Aluno b = dao.find("beltrano"); // Selecionará atraves do ID e trazer o nome
 		
-		b.setNome("eudeJ"); // vai fazer select buscando com like pelo SetNome
-		dao.update(b); // Vai fazer update no banco trocando beltrano por EudeJ
+		b.setNome("Alexandre Las Casas"); // Fará select buscando com like pelo SetNome
+		dao.update(b); // Fará update no banco trocando beltrano por EudeJ
 			
-		dao.delete(b); // vai deleter no banco por id
-		Assert.assertNotNull(b); // vai verifcar se existe no banco não tendo volta null
+		dao.delete(b); // Deletará no banco por id
+		Assert.assertNotNull(b); // Verificará se existe no banco não tendo volta null
 				
 	
 	}
@@ -60,26 +60,26 @@ public class Testes {
 	@Test
 	public void testeProfessorFind(){
 		ProfessorDAO dao = new ProfessorDAO();
-		Professor a = dao.find(100L); // id 2 L = tipo Long
+		Professor a = dao.find(100L); // id 2 L = Tipo de variável Long
 		Assert.assertEquals(a.getNome(),"Kay A. Frye");
-		// Vai verificar se na linha 2 exisi Jordam
+		// Verificará se na linha 2 existe Jordam
 		
 	}
 	
 	@Test
 	public void testeProfessorInsertEDelete(){
 		ProfessorDAO dao = new ProfessorDAO();
-		Professor pro = new Professor(null,"Eudee","98409563456",new BigDecimal(1500.00));
+		Professor pro = new Professor(null,"Alexandre","98409563456",new BigDecimal(1500.00));
 	
-		dao.insert(pro); //vai inserir o objeto a que sãos os dados acima de aluno
+		dao.insert(pro); //Inserirá o objeto a que sãos os dados acima de aluno
 		
-		Professor leo = dao.find("Eudee"); // vai selecionar atraves do ID e trazer o nome
+		Professor leo = dao.find("Alexandre"); //Selecionará através do ID e trazer o nome
 		
-		leo.setNome("eude Almeida"); // vai fazer select buscando com like pelo SetNome
+		leo.setNome("Alexandre Las Casas"); //Fará select buscando com like pelo SetNome
 		dao.update(leo); // Vai fazer update no banco trocando beltrano por EudeJ
 			
-		dao.delete(leo); // vai deleter no banco por id
-		Assert.assertNotNull(leo); // vai verifcar se existe no banco não tendo volta null
+		dao.delete(leo); //Deletará no banco por id
+		Assert.assertNotNull(leo); //Verifcará se existe no banco não tendo volta null
 	}
 	
 }

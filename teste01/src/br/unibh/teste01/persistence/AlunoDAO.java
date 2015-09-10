@@ -12,8 +12,8 @@ public class AlunoDAO implements DAO<Aluno, Long> {
 
 	public static SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 
-	// Aluno , Long e subustituido por T e K na classe DAO
-	// T e K e curinga pra chamar a Classe e o parametro geralmente ID da classe
+	// Na classe Aluno , Long é substituído por T e K na classe DAO
+	// T e K e coringa para chamar a Classe e o parâmetro geralmente é ID da classe
 
 	@Override
 	public Aluno find(Long id) {

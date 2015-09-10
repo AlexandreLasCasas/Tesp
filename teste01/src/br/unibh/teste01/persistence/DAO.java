@@ -4,8 +4,8 @@ import java.util.List;
 
 public interface DAO <T, K> {
 
-	// Classe generica para chamar os dados da Classe Aluno e Professor
-	// T e K e curinga pra chamar a Classe e o parametro geralmente ID da classe
+	// É uma classe genérica que serve para chamar os dados da Classe Aluno e Professor
+	// T e K e coringa pra chamar a Classe e o parâmetro geralmente ID da classe
 	
 	public T find (K id);
 	public void insert (T t);
