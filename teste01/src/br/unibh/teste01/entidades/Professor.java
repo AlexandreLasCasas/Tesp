@@ -3,68 +3,64 @@ package br.unibh.teste01.entidades;
 import java.math.BigDecimal;
 
 /**
- * Classe concreta de professor
- *@author Alexandre
- *@version 1.0
- *@since 2015
+ * Classe Concreta de Professor
+ * @author Alexandre
+ * @version 1.0
+ *
  */
-
 public class Professor extends Pessoa {
 	
-	// Variáveis de Instância
-	/**
-	 * Variáveis de instância
-	 */
-	private BigDecimal salario;
-	public static Double BONUS = 0.1D;
+	// Variaveis de Instancia
+	
+	private BigDecimal salario ; // trabalha melhor com números fracionários
+	private static Double BONUS=0.1D;
 	
 	// Construtores
 	/**
 	 * Construtor padrão
 	 */
-	public Professor (){}
+	public Professor(){}
 	
 	/**
-	 * Construtor com completo
+	 * 
+	 * @param Super salario
 	 */
-
+	public Professor(BigDecimal salario) {
+		super();
+		this.salario = salario;
+	}
+	/**
+	 * 
+	 * @param id identificação
+	 * @param nome do professor
+	 * @param cpf do professor
+	 * @param salario do professor
+	 */
 	public Professor(Long id, String nome, String cpf, BigDecimal salario) {
 		super(id, nome, cpf);
 		this.salario = salario;
 	}
 
-	
-	public Professor(BigDecimal matricula) {
-		super();
-		this.salario = matricula;
-	}
-	
-	// Get e Set
+	//ToString 
 	/**
-	 * Get e Set
+	 * @To.String chama o super da classe
 	 */
-	public BigDecimal getSalario() {
-		return salario;
+	@Override
+	public String toString() {
+		return "Professor [salario=" + salario + ", getSalario()=" + getSalario() + ", toString()=" + super.toString()
+				+ ", getId()=" + getId() + ", getNome()=" + getNome() + ", getCpf()=" + getCpf() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + "]";
 	}
-
+	// Gets e Sets
+	
+	
 	public void setSalario(BigDecimal salario) {
 		this.salario = salario;
 	}
 
 	
-	@Override
-	public String toString() {
-		return "Professor [salario=" + salario + ", toString()=" + super.toString() + "]";
-	}
 
-	public BigDecimal getMatricula() {
+	public BigDecimal getSalario() {
 		return salario;
 	}
-
-	public void setMatricula(BigDecimal matricula) {
-		this.salario = matricula;
-	}
-
-
-
 }
