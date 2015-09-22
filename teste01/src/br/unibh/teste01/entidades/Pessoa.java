@@ -1,7 +1,5 @@
 package br.unibh.teste01.entidades;
 
-//Identação do código = ctrl + shift + f
-
 public abstract class Pessoa {
 
 	private Long id;
@@ -17,8 +15,6 @@ public abstract class Pessoa {
 		this.cpf = cpf;
 	}
 	
-
-
 	public Pessoa(Long id, String nome) {
 		super();
 		this.id = id;
@@ -27,9 +23,7 @@ public abstract class Pessoa {
 	
 	@Override
 	public String toString() {
-		return "Pessoa [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", getId()=" + getId() + ", getNome()="
-				+ getNome() + ", getCpf()=" + getCpf() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+		return "Pessoa [id=" + id + ", nome=" + nome + ", cpf=" + cpf + "OID=" + super.toString();
 	}
 
 	public Long getId() {

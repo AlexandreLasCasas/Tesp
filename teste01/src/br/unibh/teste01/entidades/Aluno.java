@@ -3,52 +3,63 @@ package br.unibh.teste01.entidades;
 import java.util.Date;
 
 public class Aluno extends Pessoa {
-	
+
 	private String matricula;
-	private Date dataaniversaio;
-	
-	//Identação do código = ctrl + shift + f
+	private Date dataAniversario;
 	
 	public Aluno(){}
 	
-	
-	public Aluno(Long id, String nome, String cpf, String matricula,
-			Date dataaniversaio) {
-		super(id, nome, cpf);
-		this.matricula = matricula;
-		this.dataaniversaio = dataaniversaio;
-	}
-	
-	public Aluno(String matricula, Date dataaniversaio) {
+	public Aluno(String matricula, Date dataAniversario) {
 		super();
 		this.matricula = matricula;
-		this.dataaniversaio = dataaniversaio;
+		this.dataAniversario = dataAniversario;
 	}
-	
-	
-	
-	
+
+	public Aluno(Long id, String nome, String cpf, String matricula, Date dataAniversario) {
+		super(id, nome, cpf);
+		this.matricula = matricula;
+		this.dataAniversario = dataAniversario;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
-		return "Aluno [matricula=" + matricula + ", dataaniversaio=" + dataaniversaio + ", toString()="
-				+ super.toString() + "]";
+		return "Aluno [matricula=" + matricula + ", dataAniversario="
+				+ dataAniversario + ", toString()=" + super.toString() + "]";
 	}
 
-
-	public Date getDataaniversaio() {
-		return dataaniversaio;
-	
-	}
-	public void setDataaniversaio(Date dataaniversaio) {
-		this.dataaniversaio = dataaniversaio;
-	
-	}
+	/**
+	 * @return the matricula
+	 */
 	public String getMatricula() {
 		return matricula;
-	
 	}
+
+	/**
+	 * @param matricula the matricula to set
+	 */
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
+
+	/**
+	 * @return the dataAniversario
+	 */
+	public Date getDataAniversario() {
+		return dataAniversario;
+	}
+
+	/**
+	 * @param dataAniversario the dataAniversario to set
+	 */
+	public void setDataAniversario(Date dataAniversario) {
+		this.dataAniversario = dataAniversario;
+	}
 	
+	
+	
+	
+
 }
