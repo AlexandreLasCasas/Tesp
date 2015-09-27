@@ -1,4 +1,4 @@
-package br.unibh.teste01.entidades;
+package br.unibh.escola.entidades;
 
 import java.math.BigDecimal;
 
