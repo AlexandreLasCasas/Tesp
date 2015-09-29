@@ -2,9 +2,30 @@ package br.unibh.escola.entidades;
 
 import java.util.Date;
 
-public class Aluno extends Pessoa {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
+@Table(name = "TB_ALUNO", uniqueConstraints = @UniqueConstraint(columnNames = "matricula"))
+@Entity
+@PrimaryKeyJoinColumn
+public class Aluno extends Pessoa {
+	
+	@NotNull
+	@Column(nullable = false, columnDefinition="CHAR(8)")
+	@Size(max=8)
+	@Pattern(regexp = "[A-Za-z\\d]*", message = "DEVE CONTER APENAS NUMEROS E DIGITOS")
 	private String matricula;
+	
+	@Temporal(TemporalType.DATE)
+	@Column(nullable = true)
 	private Date dataAniversario;
 	
 	public Aluno(){}
