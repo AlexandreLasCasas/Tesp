@@ -18,206 +18,412 @@
 -- You can use this file to load seed data into the database using SQL statements
 insert into Member (id, name, email, phone_number) values (0, 'John Smith', 'john.smith@mailinator.com', '2125551212') 
 
-INSERT INTO `tb_professor` (`id`, `nome`, `cpf`, `salario`) VALUES
-(1, 'Teste', '99887766550', '5555.25'),
-(2, 'Stone A. Burch', '55829194863', '2587.00'),
-(3, 'Perry Craig', '16122304555', '1733.00'),
-(4, 'Veronica H. Henson', '89127841794', '1503.00'),
-(5, 'Heather U. Stuart', '50076346813', '2753.00'),
-(6, 'Cade L. Osborn', '89637901982', '1848.00'),
-(7, 'Rina R. Garcia', '45931811312', '1773.00'),
-(8, 'Sybill J. Clayton', '59948003384', '2805.00'),
-(9, 'Caleb L. Justice', '13545454801', '2511.00'),
-(10, 'Bruce P. Wilson', '40883570262', '1846.00'),
-(11, 'Thomas T. Stevens', '94571322438', '1720.00'),
-(12, 'Ashton S. Mclaughlin', '58139395586', '2333.00'),
-(13, 'Brett Z. Schwartz', '54010006612', '2731.00'),
-(14, 'Cedric U. Huber', '04608401529', '2467.00'),
-(15, 'Hu Berg', '52630779413', '2313.00'),
-(16, 'Wade V. Singleton', '15384297299', '2109.00'),
-(17, 'Kiayada Hodges', '99196639651', '2427.00'),
-(18, 'Tana Y. Cardenas', '60906547595', '2672.00'),
-(19, 'Gray Y. Shaw', '41327392891', '2816.00'),
-(20, 'Yuri B. Mcguire', '03238274156', '2364.00'),
-(21, 'Rafael G. Harding', '52053302425', '1540.00'),
-(22, 'Jasmine Franklin', '12181430544', '1555.00'),
-(23, 'Demetria Singleton', '48329119290', '1762.00'),
-(24, 'Pearl M. Ferrell', '18995839467', '2224.00'),
-(25, 'Macy Hodge', '63166830393', '2925.00'),
-(26, 'Maris Z. Moran', '66597558744', '2532.00'),
-(27, 'Mia Hampton', '85812102717', '2745.00'),
-(28, 'Buffy A. Long', '40353722379', '1932.00'),
-(29, 'Otto Berger', '47457476000', '2726.00'),
-(30, 'Hilda Morse', '31269680017', '1595.00'),
-(31, 'Drew Burris', '56615265704', '2141.00'),
-(32, 'Ifeoma Morgan', '27010473243', '1683.00'),
-(33, 'Dominic Y. Graves', '99445949378', '2229.00'),
-(34, 'Rae K. Sawyer', '75958141844', '2325.00'),
-(35, 'Brielle Rodriquez', '70356723742', '1963.00'),
-(36, 'Raven Freeman', '58386308112', '2677.00'),
-(37, 'Colorado I. Roman', '88513694624', '2860.00'),
-(38, 'Phelan Brennan', '25881612657', '1938.00'),
-(39, 'Desiree Kaufman', '11724678294', '2989.00'),
-(40, 'Daria J. Levine', '09718775712', '1784.00'),
-(41, 'Larissa Mueller', '05963718986', '2958.00'),
-(42, 'Sara Campbell', '18987282435', '2398.00'),
-(43, 'Zephania Petty', '83700643771', '2392.00'),
-(44, 'Dana O. Everett', '44723679229', '2187.00'),
-(45, 'Brenna Moody', '12679054830', '1811.00'),
-(46, 'Russell P. Mcgowan', '91392019567', '2093.00'),
-(47, 'Jemima Harding', '95329796268', '1874.00'),
-(48, 'Amethyst Hickman', '32662826860', '2044.00'),
-(49, 'Reagan Cooke', '57600898636', '1878.00'),
-(50, 'Idola Lancaster', '91374550215', '2653.00'),
-(51, 'Wynter Casey', '94184273674', '2069.00'),
-(52, 'Austin D. Buckner', '75981762478', '1585.00'),
-(53, 'Hanae Jensen', '52320503634', '2741.00'),
-(54, 'Shana Mccormick', '19322822540', '1966.00'),
-(55, 'Chanda Shannon', '41085833142', '2538.00'),
-(56, 'Uriah W. Gaines', '90803768003', '1958.00'),
-(57, 'Winifred C. Miles', '72521114777', '1741.00'),
-(58, 'Rina O. Nolan', '57505088968', '2070.00'),
-(59, 'Vernon Mclaughlin', '43608456675', '1957.00'),
-(60, 'Maxwell Howard', '89383104500', '1817.00'),
-(61, 'Honorato Chaney', '59104701474', '1793.00'),
-(62, 'Abbot X. Moss', '62329386818', '2693.00'),
-(63, 'Ahmed Burns', '97497931824', '2721.00'),
-(64, 'Brynn D. Bishop', '39242214435', '2895.00'),
-(65, 'Bo Cameron', '02300331594', '1759.00'),
-(66, 'Vanna C. Cherry', '81633009271', '2456.00'),
-(67, 'Elmo Rodgers', '54779782983', '2944.00'),
-(68, 'Merrill R. Burnett', '79292494214', '2484.00'),
-(69, 'Leslie Johnston', '41241310845', '2464.00'),
-(70, 'Chancellor Browning', '80900650917', '2652.00'),
-(71, 'Victor H. Pugh', '40699663168', '2480.00'),
-(72, 'Guy Franco', '16593410400', '2070.00'),
-(73, 'Winter K. Cochran', '48394589734', '2532.00'),
-(74, 'Kiayada Whitney', '72949812563', '1826.00'),
-(75, 'Connor D. Dunlap', '52905950221', '2179.00'),
-(76, 'Barrett Baldwin', '46940391771', '2851.00'),
-(77, 'Deacon Joyner', '71585163623', '2904.00'),
-(78, 'Ferris R. Pierce', '09127856900', '2875.00'),
-(79, 'Aimee Hunter', '52423912293', '2651.00'),
-(80, 'Dane Willis', '26816582949', '2526.00'),
-(81, 'Galena Alvarado', '69123342558', '1560.00'),
-(82, 'Jeremy I. West', '00460963132', '1884.00'),
-(83, 'Kelsey Holloway', '73810969714', '2956.00'),
-(84, 'Micah Hays', '04016457769', '2637.00'),
-(85, 'Lester M. Ruiz', '74601875544', '1525.00'),
-(86, 'Macon Q. Allen', '25511947396', '2994.00'),
-(87, 'Hashim Atkins', '91699288589', '2266.00'),
-(88, 'Sage B. Chapman', '42754415364', '2119.00'),
-(89, 'Charity Duran', '30515148254', '2828.00'),
-(90, 'Brielle A. Weiss', '92062349326', '2844.00'),
-(91, 'Glenna Y. Briggs', '28388447299', '2311.00'),
-(92, 'Sara Hines', '66035972420', '2315.00'),
-(93, 'Katelyn Q. Head', '27115008595', '2174.00'),
-(94, 'Maggie Davenport', '71336100890', '2683.00'),
-(95, 'Adrian Joyner', '71385353899', '2983.00'),
-(96, 'Plato M. Barton', '67790774588', '1993.00'),
-(97, 'Kirk Daugherty', '87926676296', '2466.00'),
-(98, 'Ezekiel Cantrell', '60404442628', '1710.00'),
-(99, 'Carson K. Dawson', '76716950756', '2521.00'),
-(100, 'Genevieve Q. Miles', '53615261808', '2487.00');
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (1,"24368212672","Bernard");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (2,"79140737720","Gregory");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (3,"72418142102","Tanner");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (4,"99272898566","Rajah");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (5,"50650832814","Hyatt");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (6,"43868895143","Eaton");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (7,"26360057358","Orlando");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (8,"15128967645","Jamal");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (9,"18885248698","Keefe");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (10,"25571561628","William");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (11,"95084828213","Owen");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (12,"05302174223","Abraham");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (13,"74025375624","Jin");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (14,"65524256037","Gabriel");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (15,"07414213384","Lucius");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (16,"19115193878","Keefe");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (17,"79939178054","Allistair");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (18,"80081620108","Reuben");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (19,"33747318164","Robert");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (20,"24023335609","Cody");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (21,"74819235690","Hunter");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (22,"41119251172","Stewart");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (23,"37870663346","Logan");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (24,"42406105644","Clinton");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (25,"90628838757","Jason");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (26,"75830901804","Daquan");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (27,"22604544057","Judah");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (28,"42542435625","Levi");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (29,"70377712157","Ferris");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (30,"83804409286","Tarik");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (31,"42605698811","Demetrius");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (32,"67849407822","Gray");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (33,"64475512420","Paki");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (34,"87200206429","Kareem");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (35,"41599249106","Adam");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (36,"82922915367","Kelly");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (37,"03783609147","Gage");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (38,"90085430644","Solomon");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (39,"91030801687","Mark");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (40,"91650466446","Rahim");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (41,"09587156844","Tate");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (42,"16364951300","Harper");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (43,"22054743418","Lane");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (44,"60819316529","Boris");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (45,"62572541948","Octavius");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (46,"41422263408","Cameron");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (47,"44899713405","Phelan");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (48,"44563405050","Kuame");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (49,"02284192884","Isaiah");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (50,"30171329122","Shad");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (51,"97136980328","Colton");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (52,"20011840082","Neil");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (53,"18525371472","Cameron");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (54,"14812903402","Francis");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (55,"30389649902","Otto");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (56,"10743998657","Christopher");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (57,"59874858252","Noble");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (58,"90486832371","Clayton");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (59,"47959561439","Chaney");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (60,"43957981835","Justin");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (61,"11019552128","Elijah");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (62,"61848659751","Kaseem");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (63,"56616995176","Jeremy");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (64,"84281561146","Stuart");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (65,"12181244165","Benjamin");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (66,"35009949627","Tucker");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (67,"84916156293","Quentin");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (68,"41707056161","Cameron");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (69,"89732826110","Paki");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (70,"88651183999","Herrod");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (71,"73130489668","Barrett");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (72,"93020747243","Hasad");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (73,"96306983200","Arsenio");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (74,"48330399328","Wing");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (75,"69712539854","Carlos");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (76,"71480667196","Jeremy");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (77,"91943414944","Rafael");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (78,"46978603094","Joshua");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (79,"53018490672","Uriah");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (80,"56010301254","Erasmus");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (81,"12313438121","Ciaran");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (82,"61030343593","Harding");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (83,"12175202739","Elvis");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (84,"15714144152","Branden");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (85,"36020548001","Neil");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (86,"61253174917","Xander");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (87,"72155098950","Garrett");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (88,"52620804232","Mannix");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (89,"95368942820","Allen");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (90,"03792981636","Tobias");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (91,"39024304717","Damian");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (92,"29606836898","Garth");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (93,"55304878195","Adam");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (94,"53492292612","Geoffrey");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (95,"96609271028","Garth");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (96,"64850398360","Cadman");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (97,"64746814746","Nero");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (98,"23543242816","Amery");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (99,"10331553559","Quinlan");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (100,"93382998524","Galvin");
 
-INSERT INTO `tb_aluno` (`id`, `nome`, `cpf`, `matricula`, `data_aniversario`) VALUES
-(1, 'Teste', '11114556664', '987654', '2000-01-01'),
-(2, 'Kamal D. Stanton', '72256372033', '367061', '2000-04-21'),
-(3, 'Jorden H. Mckee', '80946750923', '390283', '1998-10-05'),
-(4, 'Odysseus Clarke', '08518702528', '541177', '1991-04-16'),
-(5, 'Shannon A. Howe', '49262639852', '595593', '1998-02-23'),
-(6, 'Keaton M. Gould', '98155309407', '444228', '1992-04-03'),
-(7, 'Lesley Winters', '30946385187', '643274', '1999-07-21'),
-(8, 'Maile T. Chen', '22736694185', '174652', '1999-09-19'),
-(9, 'Hu Marsh', '02484647934', '508845', '2000-06-23'),
-(10, 'Driscoll J. Woodward', '41557492574', '459002', '1999-10-21'),
-(11, 'Aubrey Snow', '75202911297', '985476', '1999-12-03'),
-(12, 'Rhiannon Mitchell', '32228493100', '610580', '1992-02-01'),
-(13, 'Skyler Moody', '98612891083', '339661', '1994-09-08'),
-(14, 'Idona R. Jennings', '32471415839', '703368', '1998-04-16'),
-(15, 'Shaeleigh Banks', '37102374167', '529512', '1993-09-17'),
-(16, 'Minerva C. Brewer', '63876093594', '133087', '1993-09-29'),
-(17, 'Cameran Z. Lowe', '37950733911', '139127', '1999-02-05'),
-(18, 'Aline Mcguire', '13888636184', '089268', '1994-05-07'),
-(19, 'Nicole V. Quinn', '84650999254', '228273', '1996-03-09'),
-(20, 'Phyllis Z. Bowen', '19652204720', '719313', '1996-03-21'),
-(21, 'August I. Mendoza', '63374008481', '347639', '1998-06-24'),
-(22, 'Barry Rose', '62125727767', '091404', '1998-03-20'),
-(23, 'Velma F. Miles', '60837674889', '538776', '1994-01-29'),
-(24, 'Bertha U. Wilcox', '92606229597', '573871', '1994-09-08'),
-(25, 'Farrah N. Chaney', '11564620588', '799285', '1999-11-08'),
-(26, 'Lyle Santiago', '09632899922', '689369', '1993-04-02'),
-(27, 'Dominic V. Jimenez', '98874785341', '949690', '1994-03-22'),
-(28, 'Brennan Duran', '33995090846', '473066', '1991-02-14'),
-(29, 'Xenos Campos', '54551122695', '290118', '1994-06-22'),
-(30, 'Talon P. Mercado', '55519547780', '983040', '1996-12-03'),
-(31, 'Garrett Bean', '10399553944', '295799', '1996-04-30'),
-(32, 'Geraldine Ortega', '02050400096', '140097', '1997-07-04'),
-(33, 'Arden E. Reese', '34994323933', '134313', '1991-03-12'),
-(34, 'Katell Weber', '99372875824', '311605', '1994-09-08'),
-(35, 'Juliet I. Briggs', '96179713484', '437702', '1993-05-15'),
-(36, 'Gabriel Gross', '50360687150', '165412', '1994-10-16'),
-(37, 'Britanney Barrett', '17855783698', '174815', '1992-10-01'),
-(38, 'Mallory V. Parker', '51212190419', '530093', '1998-03-07'),
-(39, 'Upton Chang', '37984269314', '956897', '1997-09-14'),
-(40, 'Nola M. Richards', '02814555262', '531690', '1994-05-13'),
-(41, 'Allistair Morse', '77746090125', '289220', '1993-04-13'),
-(42, 'Alexander Mcclure', '17871676070', '347901', '1992-12-16'),
-(43, 'Hillary Koch', '39924457647', '724942', '1998-11-03'),
-(44, 'Ian P. Frost', '30975374442', '397959', '1992-01-01'),
-(45, 'Cullen R. Mendoza', '21349113857', '537652', '1996-09-24'),
-(46, 'Quinn Hanson', '30954987487', '519879', '2000-03-31'),
-(47, 'Freya Ruiz', '20766461687', '674384', '1992-03-25'),
-(48, 'Richard Robinson', '32831615758', '803059', '1996-05-25'),
-(49, 'Mollie M. Good', '34090517584', '250415', '1991-03-30'),
-(50, 'Gray Dillon', '00929363408', '187836', '1997-09-15'),
-(51, 'Samson Hurley', '67492576821', '317597', '1992-01-18'),
-(52, 'Ahmed Y. Ward', '75999046241', '506037', '1998-03-25'),
-(53, 'Ali S. Farmer', '23156712150', '471765', '1990-11-21'),
-(54, 'Rahim X. Barnes', '33842189095', '158793', '1996-05-10'),
-(55, 'Bradley Rios', '10759137154', '366570', '1993-09-22'),
-(56, 'Emma J. Nash', '65356968982', '418730', '1992-06-07'),
-(57, 'Alexa C. Prince', '65737197386', '712446', '1990-11-21'),
-(58, 'Keiko Workman', '96314976851', '338823', '1991-04-05'),
-(59, 'Xander Miranda', '67975650705', '210056', '1996-12-16'),
-(60, 'Mariko M. Knapp', '13612630897', '561890', '1991-10-30'),
-(61, 'Alisa Wright', '31267023263', '800394', '1991-02-24'),
-(62, 'Sigourney Castro', '15856498343', '707374', '1993-09-24'),
-(63, 'Hu I. Wade', '41614112431', '048895', '1996-08-08'),
-(64, 'Felix Johnston', '44869826109', '686933', '1993-01-03'),
-(65, 'Lev Jefferson', '43460467685', '261762', '1995-03-08'),
-(66, 'Amir L. Becker', '87595534479', '193129', '1999-09-18'),
-(67, 'Boris I. Andrews', '54095296023', '932422', '1996-06-21'),
-(68, 'Melyssa Conway', '67198984496', '720882', '1993-06-11'),
-(69, 'Melinda Cameron', '82269148706', '987417', '1994-08-14'),
-(70, 'Eve Hayes', '47168674964', '213172', '1991-04-02'),
-(71, 'Jordan Solomon', '21935719293', '162124', '1996-10-24'),
-(72, 'Ruby R. Fuller', '64695900642', '120196', '1995-03-24'),
-(73, 'Rooney E. Snider', '49733811066', '840532', '1993-12-19'),
-(74, 'Lucy X. Terrell', '74423047932', '130452', '1995-07-23'),
-(75, 'Wing Moran', '33505122660', '032422', '1999-03-20'),
-(76, 'Yael Leblanc', '52117950717', '121696', '1998-03-21'),
-(77, 'Quinlan Frank', '46483660075', '247123', '1996-12-02'),
-(78, 'Chastity Y. Downs', '94029555391', '811293', '1995-03-19'),
-(79, 'Zeph W. Vasquez', '99242919959', '118190', '1990-08-22'),
-(80, 'Denton X. Calderon', '83047718227', '796227', '1993-11-22'),
-(81, 'Coby Mathews', '87936773434', '896375', '1996-11-16'),
-(82, 'Xavier Sampson', '36652798224', '852948', '1997-06-14'),
-(83, 'Echo Q. Dyer', '56300641520', '998378', '1991-10-09'),
-(84, 'Pamela V. Charles', '31539300707', '596075', '1997-07-14'),
-(85, 'Wendy D. Dunlap', '28086137907', '349233', '1997-08-29'),
-(86, 'Kessie Beach', '31454681767', '044629', '1998-03-17'),
-(87, 'Arden B. Dawson', '78196313472', '585114', '1992-01-19'),
-(88, 'Amal Meyer', '30044538331', '833334', '1992-07-18'),
-(89, 'Eden Dillard', '39261951273', '497584', '1998-10-07'),
-(90, 'Alden F. Riley', '41827561934', '097414', '1995-12-10'),
-(91, 'Orson Holcomb', '70032591470', '520993', '1990-08-27'),
-(92, 'Robin R. Carter', '52771813955', '634909', '1995-02-14'),
-(93, 'Anika Duffy', '93193690910', '426270', '1991-05-17'),
-(94, 'Jada Landry', '27452639102', '030658', '1994-05-27'),
-(95, 'Maya D. Soto', '03684413223', '755435', '1999-12-30'),
-(96, 'Cora X. Randall', '16884334119', '411187', '1991-01-11'),
-(97, 'Tamekah Cash', '67776302932', '253868', '1999-11-11'),
-(98, 'Kyla B. Walls', '33889805502', '339149', '1999-01-20'),
-(99, 'Marsden Mccall', '88355385296', '868092', '1996-12-29'),
-(100, 'Leandra Cash', '69681654469', '889682', '2000-02-06');
+
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (101,"78133689168","Dillon");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (102,"82694213551","Joseph");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (103,"52554084223","Ignatius");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (104,"66978198921","Kadeem");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (105,"82025473118","Maxwell");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (106,"61512020172","Kadeem");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (107,"41674505785","Gil");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (108,"00624447599","Lyle");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (109,"96055473819","Alvin");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (110,"49036189687","Basil");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (111,"55846385875","Orlando");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (112,"33949482127","Elijah");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (113,"14615755899","Ralph");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (114,"44816290249","Oliver");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (115,"72427384014","Vincent");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (116,"32298392606","Aquila");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (117,"46245188699","Sebastian");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (118,"20761840911","Adrian");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (119,"77932326078","Erasmus");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (120,"71007896361","Abraham");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (121,"29472766391","Timothy");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (122,"62162001480","Mason");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (123,"31736309864","Fulton");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (124,"71281110741","Zachary");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (125,"08036401098","Timon");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (126,"69926192805","Ralph");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (127,"53978903925","Colby");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (128,"41890878696","Christian");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (129,"58035155230","Odysseus");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (130,"75790197555","Levi");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (131,"95075315123","Arsenio");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (132,"25450105445","Rajah");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (133,"89192287899","Murphy");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (134,"41568319348","August");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (135,"82687661627","Chase");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (136,"60802469808","Levi");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (137,"65794928940","Damon");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (138,"87721796787","Robert");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (139,"74045564100","Lester");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (140,"84915820995","Wade");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (141,"96010714718","Cole");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (142,"23126149714","Barclay");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (143,"66892764623","Galvin");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (144,"86693130728","Omar");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (145,"25367203994","Ashton");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (146,"89079728355","Silas");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (147,"11802951160","Ross");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (148,"76601255611","Myles");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (149,"88040559849","Timothy");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (150,"71621168690","Leroy");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (151,"99282126960","Rafael");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (152,"11218811815","Hoyt");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (153,"59926279823","Justin");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (154,"35297630826","George");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (155,"21797572833","Edward");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (156,"18015550239","Dennis");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (157,"30159726290","Zahir");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (158,"25137637678","Vaughan");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (159,"51566695611","Abdul");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (160,"94944120724","Ahmed");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (161,"07751989008","Judah");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (162,"87133941467","Solomon");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (163,"03829196858","Hakeem");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (164,"00499670750","Elliott");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (165,"17849745277","Colby");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (166,"66906014319","Walker");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (167,"07581666461","Axel");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (168,"53785810731","Hiram");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (169,"22495603117","Evan");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (170,"79826590801","Steven");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (171,"48283013884","Xander");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (172,"44130798671","Quentin");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (173,"15879381782","Rafael");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (174,"87661681019","Hayden");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (175,"30925807731","Elvis");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (176,"94331531368","Denton");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (177,"50550209050","Jason");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (178,"93109775778","Brennan");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (179,"04932072251","Stephen");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (180,"40828864905","Addison");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (181,"38806667894","Tate");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (182,"94661037091","Logan");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (183,"30464616908","Anthony");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (184,"73368373807","Oren");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (185,"56751773919","Wayne");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (186,"25544274566","Driscoll");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (187,"31696682012","Curran");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (188,"42298652125","Murphy");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (189,"18054168154","Christian");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (190,"69967601277","Kevin");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (191,"51786840432","Garrett");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (192,"53627393816","Barclay");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (193,"14119269508","Oscar");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (194,"48836875483","Tyrone");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (195,"80866575889","George");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (196,"19664563678","Emerson");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (197,"81707476053","Cruz");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (198,"07740722718","Hashim");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (199,"96406927840","Rudyard");
+INSERT INTO `tb_pessoa` (`id`,`cpf`,`nome`) VALUES (200,"32567912196","Steel");
+
+
+
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (101,"$5250.68","Jonah");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (102,"$791.08","Ezra");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (103,"$1395.66","Hoyt");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (104,"$5078.77","Nasim");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (105,"$6313.40","Anthony");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (106,"$799.65","Myles");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (107,"$3992.63","Xenos");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (108,"$5308.86","Erich");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (109,"$573.52","Wayne");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (110,"$827.89","Xanthus");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (111,"$754.25","Uriel");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (112,"$1141.46","Julian");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (113,"$7820.85","Tate");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (114,"$2266.19","Garth");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (115,"$6225.42","Tanek");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (116,"$9769.81","Upton");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (117,"$3025.33","Stewart");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (118,"$8221.50","Ian");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (119,"$8513.17","Travis");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (120,"$7986.21","Branden");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (121,"$6376.70","James");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (122,"$1503.84","Clark");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (123,"$2467.39","Gary");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (124,"$1560.14","Hiram");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (125,"$9940.80","Knox");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (126,"$5946.56","Arthur");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (127,"$7710.48","Jared");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (128,"$698.76","Lee");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (129,"$2071.54","Timon");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (130,"$6151.70","Eaton");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (131,"$6257.80","Davis");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (132,"$7970.68","Dustin");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (133,"$8928.15","Noble");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (134,"$800.87","Theodore");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (135,"$1467.74","Elijah");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (136,"$2494.94","Ahmed");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (137,"$7556.51","Boris");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (138,"$2369.58","Knox");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (139,"$8817.11","Tyler");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (140,"$8073.98","Nolan");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (141,"$7593.10","Slade");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (142,"$4429.32","Wayne");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (143,"$2992.40","Jermaine");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (144,"$4901.76","Ulric");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (145,"$9953.55","Ryan");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (146,"$9735.75","Drake");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (147,"$9669.93","Drew");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (148,"$7830.39","Hunter");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (149,"$2469.89","Lee");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (150,"$2438.89","Micah");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (151,"$6395.37","Carter");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (152,"$5498.70","Slade");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (153,"$3338.97","Ashton");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (154,"$4538.38","Steel");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (155,"$7931.63","Nathan");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (156,"$7235.73","Michael");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (157,"$5362.52","Armando");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (158,"$3656.95","Damian");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (159,"$2851.12","Stewart");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (160,"$5205.11","Kieran");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (161,"$7882.40","Kevin");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (162,"$7147.51","Theodore");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (163,"$3478.16","Timon");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (164,"$5070.67","Rigel");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (165,"$9990.51","Dylan");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (166,"$1047.28","Trevor");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (167,"$2079.76","Rashad");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (168,"$3125.56","Patrick");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (169,"$2315.46","Ronan");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (170,"$3176.50","Emerson");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (171,"$2981.82","Justin");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (172,"$844.77","William");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (173,"$3557.52","Wade");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (174,"$8336.28","Isaiah");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (175,"$4503.42","Noble");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (176,"$9217.14","Acton");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (177,"$3457.21","Garrison");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (178,"$5027.81","Ross");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (179,"$8014.94","Rashad");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (180,"$7398.86","Harding");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (181,"$8671.75","Marsden");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (182,"$5655.92","Devin");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (183,"$4085.82","Chaim");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (184,"$7093.48","Harding");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (185,"$2181.88","Ignatius");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (186,"$1245.39","Xanthus");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (187,"$859.88","Sawyer");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (188,"$7099.88","Keith");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (189,"$741.80","Roth");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (190,"$3275.65","Uriel");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (191,"$2971.11","Chancellor");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (192,"$1328.72","Randall");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (193,"$1678.23","Salvador");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (194,"$8943.73","Seth");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (195,"$6600.95","Baxter");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (196,"$7097.30","Lawrence");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (197,"$8420.55","Thaddeus");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (198,"$5133.99","Luke");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (199,"$9551.52","Garrett");
+INSERT INTO `tb_professor` (`id`,`salario`,`nome`) VALUES (200,"$7229.34","Silas");
+
+
+
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (1,4,"1993/08/03");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (2,7,"1992/06/30");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (3,5,"1988/05/04");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (4,6,"2004/01/20");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (5,9,"2005/05/24");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (6,2,"1990/09/21");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (7,6,"2015/02/16");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (8,2,"2003/11/07");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (9,1,"2002/07/11");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (10,9,"1992/10/13");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (11,2,"1995/12/16");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (12,10,"1985/05/15");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (13,10,"1998/04/09");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (14,6,"1984/10/10");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (15,10,"1997/09/03");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (16,4,"2016/05/07");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (17,2,"2013/02/12");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (18,5,"2009/03/25");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (19,7,"2015/11/02");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (20,4,"1983/08/18");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (21,10,"1983/03/28");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (22,3,"1987/09/07");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (23,2,"1991/05/18");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (24,7,"1993/10/05");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (25,8,"1986/01/30");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (26,3,"1987/03/15");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (27,2,"1995/10/22");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (28,7,"1987/11/11");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (29,9,"1996/03/17");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (30,10,"2007/12/07");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (31,3,"2008/04/22");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (32,1,"1984/01/29");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (33,9,"1989/03/30");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (34,8,"1993/08/28");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (35,10,"2013/01/30");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (36,7,"1982/06/14");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (37,7,"1997/05/10");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (38,2,"1982/08/15");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (39,4,"2008/04/09");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (40,7,"2002/01/06");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (41,8,"1985/10/10");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (42,2,"2005/04/03");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (43,7,"2004/04/10");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (44,4,"2007/11/19");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (45,9,"1995/05/03");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (46,6,"1984/03/22");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (47,1,"2005/12/27");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (48,1,"1980/11/01");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (49,8,"2013/07/09");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (50,10,"2007/05/24");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (51,1,"2016/07/29");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (52,10,"2008/12/31");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (53,10,"2015/09/10");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (54,1,"2015/07/17");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (55,8,"2008/07/05");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (56,6,"1995/12/17");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (57,10,"2004/05/02");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (58,1,"1986/02/26");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (59,10,"1991/10/08");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (60,2,"2002/09/17");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (61,4,"1998/01/10");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (62,10,"2014/05/14");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (63,6,"2008/05/04");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (64,7,"2008/07/28");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (65,7,"1985/09/04");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (66,1,"2008/07/31");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (67,8,"2010/09/19");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (68,2,"1990/01/15");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (69,2,"2006/03/13");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (70,5,"2013/01/27");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (71,6,"2008/02/29");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (72,2,"1990/07/25");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (73,10,"1985/04/01");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (74,8,"2002/12/24");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (75,5,"1987/12/16");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (76,7,"1995/05/15");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (77,9,"2004/07/13");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (78,1,"2006/08/20");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (79,10,"1997/02/06");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (80,2,"1990/10/28");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (81,2,"2000/01/17");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (82,3,"2008/09/22");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (83,4,"1998/04/30");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (84,8,"2005/07/13");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (85,4,"2008/06/01");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (86,1,"2004/07/14");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (87,1,"1981/03/03");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (88,4,"1984/10/30");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (89,5,"2003/01/02");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (90,8,"2010/05/19");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (91,8,"1989/05/16");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (92,6,"2005/07/29");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (93,3,"1982/08/14");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (94,7,"2004/11/25");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (95,5,"1983/10/07");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (96,3,"2012/05/21");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (97,4,"1996/09/23");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (98,2,"1994/08/17");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (99,10,"1986/04/07");
+INSERT INTO `tb_aluno` (`id`,`matricula`,`data_aniversario`) VALUES (100,8,"1996/02/04");
+
