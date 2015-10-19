@@ -54,8 +54,10 @@ public class Sala {
 	@Temporal(TemporalType.DATE)
 	@Column(name = "data_termino_manutencao", nullable = true)
 	private Date dataTerminoManutencao;
-
-	public Sala(Long id, String codigo, int capacidade, boolean possuiQuadroBranco, boolean possuiDataShow,
+	
+	public Sala (){}
+	
+	public Sala (Long id, String codigo, int capacidade, boolean possuiQuadroBranco, boolean possuiDataShow,
 			boolean possuiComputador, String observacao, int status, Date dataTerminoManutencao) {
 		super();
 		this.id = id;
