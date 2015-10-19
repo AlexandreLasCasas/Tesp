@@ -14,23 +14,26 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
 
-@Entity
+@Entity 
 @Inheritance(strategy=InheritanceType.JOINED)
-@Table(name = "TB_PESSOA", uniqueConstraints = @UniqueConstraint(columnNames = "cpf"))
-
+@Table(name="TB_PESSOA", 
+	uniqueConstraints = @UniqueConstraint(columnNames = "cpf"))
 public abstract class Pessoa {
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@NotBlank
-	@Column(length = 100, nullable = false, columnDefinition="VARCHAR(100)")
-	@Size(min=5, max=100)
-	@Pattern(regexp = "[A-Za-zÁ-ú ]*", message = "must contain only letters and spaces")
+	@Size (min= 5, max=100)
+	@Pattern (regexp="[A-Za-zÄ-ú]*", message="Forneça apenas caracteres, podendo ter acentuação.")
+	@Column(nullable= false, columnDefinition= "VARCHAR(100)")
 	private String nome;
 	
 	@NotBlank
-	@Column(length = 11, nullable = false, columnDefinition="CHAR(11)", unique = true)
-	@Pattern(regexp = "d{11}", message = "must contain only numbers")
+	@Size (min= 11, max= 11)
+	@Pattern (regexp= "\\d{11}", message= "Favor fornecer uma sequencia de 11 digitos")
+	@Column(nullable= false, columnDefinition= "CHAR(11)")
 	private String cpf;
 	
 	public Pessoa(){}

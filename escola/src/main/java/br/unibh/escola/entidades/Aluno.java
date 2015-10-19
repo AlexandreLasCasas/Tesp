@@ -9,23 +9,26 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.UniqueConstraint;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-@Table(name = "TB_ALUNO", uniqueConstraints = @UniqueConstraint(columnNames = "matricula"))
+import org.hibernate.validator.constraints.NotBlank;
+
 @Entity
 @PrimaryKeyJoinColumn
+@Table (name= "TB_ALUNO", 
+	uniqueConstraints = @UniqueConstraint(columnNames= "matricula"))
 public class Aluno extends Pessoa {
 	
-	@NotNull
-	@Column(nullable = false, columnDefinition="CHAR(8)")
-	@Size(max=8)
-	@Pattern(regexp = "[A-Za-z\\d]*", message = "DEVE CONTER APENAS NUMEROS E DIGITOS")
+	@NotBlank
+	@Size (max= 8)
+	@Pattern (regexp= "[A-Za-z0-9]*")
+	@Column (nullable= false, columnDefinition= "VARCHAR(8)")
 	private String matricula;
 	
-	@Temporal(TemporalType.DATE)
-	@Column(nullable = true,name="data_aniversario")
+	@Temporal (TemporalType.DATE)
+	@Pattern (regexp="[0-9]2\\[0-9]2\\[0-9]4")
+	@Column (name= "DataNascimento",nullable= true)
 	private Date dataAniversario;
 	
 	public Aluno(){}
