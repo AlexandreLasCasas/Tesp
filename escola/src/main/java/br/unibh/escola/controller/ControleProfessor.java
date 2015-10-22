@@ -1,5 +1,6 @@
 package br.unibh.escola.controller;
 
+
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -10,26 +11,26 @@ import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 
-import br.unibh.escola.data.ServicoAluno;
-import br.unibh.escola.entidades.Aluno;
+import br.unibh.escola.data.ServicoProfessor;
+import br.unibh.escola.entidades.Professor;
 
-@ManagedBean(name = "alunomb")
+@ManagedBean(name = "professormb")
 @ViewScoped
-public class ControleAluno {
+public class ControleProfessor {
 	@Inject
 	private Logger log;
 	@Inject
-	private ServicoAluno sa;
-	private Aluno aluno;
+	private ServicoProfessor sa;
+	private Professor professor;
 	private String nomeArg;
-	private List<Aluno> alunos;
+	private List<Professor> professores;
 
-	public Aluno getAluno() {
-		return aluno;
+	public Professor getProfessor() {
+		return professor;
 	}
 
-	public void setAluno(Aluno aluno) {
-		this.aluno = aluno;
+	public void setProfessor(Professor professor) {
+		this.professor = professor;
 	}
 
 	public String getNomeArg() {
@@ -40,15 +41,15 @@ public class ControleAluno {
 		this.nomeArg = nomeArg;
 	}
 
-	public List<Aluno> getAlunos() {
-		return alunos;
+	public List<Professor> getProfessores() {
+		return professores;
 	}
 
 	@PostConstruct
 	public void inicializaLista() {
-		log.info("Executando o MB de Aluno");
+		log.info("Executando o MB de Professor");
 		try {
-			alunos = sa.findAll();
+			professores = sa.findAll();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -57,60 +58,60 @@ public class ControleAluno {
 	public void gravar() {
 		FacesMessage facesMsg;
 		try {
-			if (aluno.getId() == null) {
-				aluno = sa.insert(aluno);
+			if (professor.getId() == null) {
+				professor = sa.insert(professor);
 			} else {
-				aluno = sa.update(aluno);
+				professor = sa.update(professor);
 			}
-			alunos = sa.findByName(nomeArg);
+			professores = sa.findByName(nomeArg);
 		} catch (Exception e) {
 			facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro: " + e.getMessage(), "");
 			FacesContext.getCurrentInstance().addMessage("messagePanel", facesMsg);
 			return;
 		}
-		facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Aluno gravado com sucesso!", "");
+		facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Professor gravado com sucesso!", "");
 		FacesContext.getCurrentInstance().addMessage("messagePanel", facesMsg);
 	}
 
 	public void pesquisar() {
 		try {
-			alunos = sa.findByName(nomeArg);
+			professores = sa.findByName(nomeArg);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
 	public void novo() {
-		aluno = new Aluno();
+		professor = new Professor();
 	}
 
 	public void cancelar() {
-		aluno = null;
+		professor = null;
 	}
 
 	public void editar(Long id) {
 		try {
-			aluno = sa.find(id);
+			professor = sa.find(id);
 			return;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		aluno = null;
+		professor = null;
 	}
 
 	public void excluir(Long id) {
 		FacesMessage facesMsg;
 		try {
 			sa.delete(sa.find(id));
-			alunos = sa.findByName(nomeArg);
+			professores = sa.findByName(nomeArg);
 		} catch (Exception e) {
 			e.printStackTrace();
 			facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro: " + e.getMessage(), "");
 			FacesContext.getCurrentInstance().addMessage("messagePanel", facesMsg);
 			return;
 		}
-		aluno = null;
-		facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Aluno excluído com sucesso!", "");
+		professor = null;
+		facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Professor excluído com sucesso!", "");
 		FacesContext.getCurrentInstance().addMessage("messagePanel", facesMsg);
 	}
 }
