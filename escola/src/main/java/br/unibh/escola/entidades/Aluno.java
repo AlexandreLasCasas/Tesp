@@ -32,7 +32,7 @@ public class Aluno extends Pessoa {
 	private String matricula;
 	
 	@Temporal (TemporalType.DATE)
-	@Pattern (regexp="[0-9]2\\[0-9]2\\[0-9]4")
+	
 	@Column (name= "DataNascimento",nullable= true)
 	private Date dataAniversario;
 	
