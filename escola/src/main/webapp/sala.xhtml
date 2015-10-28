@@ -1,21 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    JBoss, Home of Professional Open Source
-    Copyright 2014, Red Hat, Inc. and/or its affiliates, and individual
-    contributors by the @authors tag. See the copyright.txt in the
-    distribution for a full listing of individual contributors.
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-    http://www.apache.org/licenses/LICENSE-2.0
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
--->
-<?xml version="1.0" encoding="UTF-8"?>
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
@@ -24,88 +7,150 @@
 	template="/WEB-INF/templates/default.xhtml">
 	<ui:define name="content">
 		<h:panelGroup id="cadastro">
-			<h:form id="cad" rendered="#{alunomb.aluno != null}">
+			<h:form id="cad" rendered="#{salamb.sala != null}">
 				<p:panel>
-					<h:outputText value="Cadastro de Alunos"
+					<h:outputText value="Cadastro de Salas"
 						style="font-size:18px;font-weight:bold" />
 					<p:messages />
 					<p:panelGrid columns="3" styleClass="ui-noborder">
-						<p:outputLabel value="Nome " />
-						<p:inputText id="nome" value="#{alunomb.aluno.nome}" size="50" />
-						<p:message for="nome" errorClass="invalid" />
-						<p:outputLabel value="CPF " />
-						<p:inputText id="cpf" value="#{alunomb.aluno.cpf}" size="14" />
-						<p:message for="cpf" errorClass="invalid" />
-						<p:outputLabel value="Matrícula " />
-						<p:inputText id="matricula" value="#{alunomb.aluno.matricula}"
-							size="10" />
-						<p:message for="matricula" errorClass="invalid" />
-						<p:outputLabel value="Data de Aniversário " />
-						<p:calendar id="dataAniversario"
-							value="#{alunomb.aluno.dataAniversario}" size="10"
-							datePattern="dd/MM/yyyy" />
-						<p:message for="dataAniversario" errorClass="invalid" />
+						<p:outputLabel value="Codigo " />
+						<p:inputText id="codigo" value="#{salamb.sala.codigo}" size="10" />
+						<p:message for="codigo" errorClass="invalid" />
+
+						<p:outputLabel value="Capacidade " />
+						<p:inputText id="capacidade" value="#{salamb.sala.capacidade}"
+							maxValue="100" />
+						<p:message for="capacidade" errorClass="invalid" />
+
 					</p:panelGrid>
-					<p:commandButton id="gravar" action="#{alunomb.gravar}"
+
+					<p:panelGrid columns="2" styleClass="ui-noborder">
+
+						<p:outputLabel value="Possui Quadro Branco?" />
+						<p:selectBooleanButton value="#{salamb.sala.possuiQuadroBranco}"
+							onLabel="Sim" offLabel="Nao" style="width:60px" />
+
+
+						<p:outputLabel value="Possui DataShow?" />
+						<p:selectBooleanButton value="#{salamb.sala.possuiDataShow}"
+							onLabel="Sim" offLabel="Nao" style="width:60px" />
+
+
+						<p:outputLabel value="Possui Computador?" />
+						<p:selectBooleanButton value="#{salamb.sala.possuiComputador}"
+							onLabel="Sim" offLabel="Nao" style="width:60px" />
+
+						<p:outputLabel value="Observacao" />
+						<p:inputTextarea cols="60" rows="4"
+							value="#{salamb.sala.observacao}" />
+
+						<p:outputLabel value="Status?" />
+						<p:selectOneButton required="true" value="#{salamb.sala.status}">
+							<f:selectItem itemLabel="Ativo" itemValue="1" />
+							<f:selectItem itemLabel="Em manutencao" itemValue="2" />
+							<f:selectItem itemLabel="Desativado" itemValue="3" />
+						</p:selectOneButton>
+
+						<p:outputLabel value="Data de Termino Manutencao" />
+						<p:calendar id="dataTerminoManutencao"
+							value="#{salamb.sala.dataTerminoManutencao}" size="10"
+							datePattern="d/M/yy" />
+						<h:message for="dataTerminoManutencao" errorClass="invalid" />
+
+					</p:panelGrid>
+
+
+					<p:commandButton id="gravar" action="#{salamb.gravar}"
 						value="Gravar" update="cadastro" ajax="false" />
-					<p:commandButton id="cancelar" action="#{alunomb.cancelar}"
+					<p:commandButton id="cancelar" action="#{salamb.cancelar}"
 						value="Cancelar" immediate="true" update="cadastro,pesquisa"
 						ajax="false" />
 				</p:panel>
 			</h:form>
 		</h:panelGroup>
-		<p:panel id="pesquisa" rendered="#{alunomb.aluno == null}">
-			<h:outputText value="Lista de Alunos"
-				style="font-size:18px;font-weight:bold" />
+			<p:panel id="pesquisa" rendered="#{salamb.sala == null}">
+			<h:outputText value="Lista de Salas"
+				style="font-size:18px;fontweight:bold" />
 			<h:form id="arg">
 				<p:panelGrid columns="4" styleClass="ui-noborder">
 					<p:outputLabel value="Nome:" />
-					<p:inputText id="nomeArg" value="#{alunomb.nomeArg}" />
-					<p:commandButton id="pesquisar" action="#{alunomb.pesquisar}"
+					<p:inputText id="codArg" value="#{salamb.codArg}" />
+					<p:commandButton id="pesquisar" action="#{salamb.pesquisar}"
 						value="Pesquisar" update="pesquisa" ajax="false" />
-					<p:commandButton id="novo" action="#{alunomb.novo}" value="Novo"
+					<p:commandButton id="novo" action="#{salamb.novo}" value="Novo"
 						update="pesquisa,cadastro" ajax="false" />
 				</p:panelGrid>
 			</h:form>
-			<h:panelGroup rendered="#{empty alunomb.alunos}">
-				<h:outputText value="Nenhum aluno existe" />
+			<h:panelGroup rendered="#{empty salamb.salas}">
+				<h:outputText value="Nenhuma sala existe" />
 			</h:panelGroup>
 			<h:form id="edt">
-				<p:dataTable id="tabela" var="aluno" value="#{alunomb.alunos}"
+				<p:dataTable id="tabela" var="sala" value="#{salamb.salas}"
 					rendered="#{not empty alunomb.alunos}"
-					onrowclick="selectRow('#{aluno.id}')" paginator="true" rows="15">
-					<p:column headerText="Id" width="10%" sortBy="#{aluno.id}">
+					onrowclick="selectRow('#{sala.id}')" paginator="true" rows="15">
+					
+					<p:column headerText="Id" width="5%" sortBy="#{sala.id}">
 						<div align="center">
-							<h:outputText value="#{aluno.id}" />
+							<h:outputText value="#{sala.id}" />
 						</div>
 					</p:column>
-					<p:column headerText="Nome" width="35%" sortBy="#{aluno.nome}">
-						<h:outputText value="#{aluno.nome}" />
+					
+					<p:column width="7%">
+						<f:facet name="header">
+							<h:outputText value="Codigo" />
+						</f:facet>
+						<h:outputText value="#{sala.codigo}" />
 					</p:column>
-					<p:column headerText="CPF" width="20%">
-						<div align="center">
-							<h:outputText value="#{aluno.cpf}" />
-						</div>
+
+					<p:column width="10%">
+						<f:facet name="header">
+							<h:outputText value="Capacidade" />
+						</f:facet>
+						<h:outputText value="#{sala.capacidade}" />
 					</p:column>
-					<p:column headerText="Matricula" width="15%"
-						sortBy="#{aluno.matricula}">
-						<div align="center">
-							<h:outputText value="#{aluno.matricula}" />
-						</div>
+
+
+					<p:column width="8%">
+						<f:facet name="header">
+							<h:outputText value="Possui Quadro?" />
+						</f:facet>
+						
+						<h:outputText value="#{sala.quadroToString(possuiQuadroBranco)}" />
+				
+						
 					</p:column>
-					<p:column headerText="Data de Aniversário" width="20%">
-						<div align="center">
-							<h:outputText value="#{aluno.dataAniversario}">
-								<f:convertDateTime pattern="dd/MM/yyyy" />
-							</h:outputText>
-						</div>
+					<p:column width="10%">
+						<f:facet name="header">
+							<h:outputText value="Possui DataShow?" />
+						</f:facet>
+						<h:outputText value="#{sala.dataToString(possuiDataShow)}" />
 					</p:column>
-					<p:column headerText="Comandos" width="20%">
+					<p:column width="11%">
+						<f:facet name="header">
+							<h:outputText value="Possui Computador?" />
+						</f:facet>
+						<h:outputText value="#{sala.pcToString(possuiComputador)}" />
+					</p:column>
+					<p:column width="7%">
+						<f:facet name="header">
+							<h:outputText value="Status" />
+						</f:facet>
+						<h:outputText value="#{sala.statusToString(status)}" />
+					</p:column>
+					<p:column width="10%">
+						<f:facet name="header">
+							<h:outputText value="Data de Termino da Manutencao" />
+						</f:facet>
+						<h:outputText value="#{sala.terminoToString(dataTerminoManutencao)}" />
+					</p:column>
+					
+					
+					<p:column headerText="Comandos" width="10%">
 						<div align="center">
-							<p:commandLink id="editar" action="#{alunomb.editar(aluno.id)}"
+							<p:commandLink id="editar" action="#{salamb.editar(sala.id)}"
 								value="Editar" update="pesquisa" ajax="false" />
 							<h:outputText value=" " />
-							<p:commandLink id="excluir" action="#{alunomb.excluir(aluno.id)}"
+							<p:commandLink id="excluir" action="#{salamb.sala(sala.id)}"
 								value="Excluir" update="pesquisa" ajax="false" />
 						</div>
 					</p:column>

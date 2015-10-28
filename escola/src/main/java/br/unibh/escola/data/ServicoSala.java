@@ -57,4 +57,11 @@ public class ServicoSala implements DAO<Sala, Long> {
 		log.info("Encontrando Salas " + name);
 		return em.createNamedQuery("Sala.findByName").setParameter("nome", name + "%").getResultList();
 	}
+	
+	@SuppressWarnings("unchecked")
+
+	public List<Sala> findByCod(String codigo) throws Exception {
+		log.info("Encontrando Salas " + codigo);
+		return em.createNamedQuery("Sala.findByCod").setParameter("codigo", codigo + "%").getResultList();
+	}
 }
