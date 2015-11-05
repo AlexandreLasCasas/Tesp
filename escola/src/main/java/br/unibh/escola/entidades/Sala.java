@@ -14,8 +14,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -34,14 +34,14 @@ public class Sala {
 	private Long id;
 
 	@NotBlank
-	@Pattern(regexp = "[A-Z]2[0-9]3")
+	@Pattern(regexp = "[A-Z]{2}[0-9]{3}")
 	@Size(min = 5, max = 5)
 	@Column(nullable = false, columnDefinition = "CHAR(5)")
 	private String codigo;
 	
 	@NotNull
-	@Min(5)
-	@Max(100)
+	@DecimalMin("5")
+	@DecimalMax("100")
 	private int capacidade;
 
 	@Column(name = "possui_quadro_branco", nullable = false)
@@ -57,8 +57,7 @@ public class Sala {
 	@Column(nullable = true, columnDefinition = "VARCHAR(255)")
 	private String observacao;
 
-	@NotBlank
-	@Pattern(regexp = "[1-3]1")
+	@NotNull
 	@Column(nullable = false)
 	private int status;
 

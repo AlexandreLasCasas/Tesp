@@ -55,7 +55,7 @@ public class ServicoSala implements DAO<Sala, Long> {
 	@Override
 	public List<Sala> findByName(String name) throws Exception {
 		log.info("Encontrando Salas " + name);
-		return em.createNamedQuery("Sala.findByName").setParameter("nome", name + "%").getResultList();
+		return em.createNamedQuery("Sala.findByCod").setParameter("codigo", name + "%").getResultList();
 	}
 	
 	@SuppressWarnings("unchecked")
