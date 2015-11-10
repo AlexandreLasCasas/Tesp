@@ -34,7 +34,7 @@ public class Sala {
 	private Long id;
 
 	@NotBlank
-	@Pattern(regexp = "[A-Z]{2}[0-9]{3}")
+	@Pattern(regexp = "[A-Z]{2}[0-9]{3}", message="O código deve seguir o padrão NNAAA")
 	@Size(min = 5, max = 5)
 	@Column(nullable = false, columnDefinition = "CHAR(5)")
 	private String codigo;
