@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
+		<h:panelGroup id="cadastro">
+			<h:form id="cad" rendered="#{professormb.professor != null}">
+				<p:panel>
+					<h:outputText value="Cadastro de Professores"
+						style="font-size:18px;font-weight:bold" />
+					<p:messages />
+					<p:panelGrid columns="3" styleClass="ui-noborder">
+						<p:outputLabel value="Nome " />
+						<p:inputText id="nome" value="#{professormb.professor.nome}" size="50" />
+						<p:message for="nome" errorClass="invalid" />
+						<p:outputLabel value="CPF " />
+						<p:inputText id="cpf" value="#{professormb.professor.cpf}" size="14" />
+						<p:message for="cpf" errorClass="invalid" />
+						<p:outputLabel value="Salário" />
+						<p:inputText id="salario" value="#{professormb.professor.salario}"
+							size="10" />
+						<p:message for="salario" errorClass="invalid" />
+					</p:panelGrid>
+					<p:commandButton id="gravar" action="#{professormb.gravar}"
+						value="Gravar" update="cadastro" ajax="false" />
+					<p:commandButton id="cancelar" action="#{professormb.cancelar}"
+						value="Cancelar" immediate="true" update="cadastro,pesquisa"
+						ajax="false" />
+				</p:panel>
+			</h:form>
+		</h:panelGroup>
+		<p:panel id="pesquisa" rendered="#{professormb.professor == null}">
+			<h:outputText value="Lista de Professores"
+				style="font-size:18px;font-weight:bold" />
+			<h:form id="arg">
+				<p:panelGrid columns="4" styleClass="ui-noborder">
+					<p:outputLabel value="Nome:" />
+					<p:inputText id="nomeArg" value="#{professormb.nomeArg}" />
+					<p:commandButton id="pesquisar" action="#{professormb.pesquisar}"
+						value="Pesquisar" update="pesquisa" ajax="false" />
+					<p:commandButton id="novo" action="#{professormb.novo}" value="Novo"
+						update="pesquisa,cadastro" ajax="false" />
+				</p:panelGrid>
+			</h:form>
+			<h:panelGroup rendered="#{empty professormb.professores}">
+				<h:outputText value="Nenhum professor existe" />
+			</h:panelGroup>
+			<h:form id="edt">
+				<p:dataTable id="tabela" var="professor" value="#{professormb.professores}"
+					rendered="#{not empty professormb.professores}"
+					onrowclick="selectRow('#{professor.id}')" paginator="true" rows="15">
+					<p:column headerText="Id" width="10%" sortBy="#{professor.id}">
+						<div align="center">
+							<h:outputText value="#{professor.id}" />
+						</div>
+					</p:column>
+					<p:column headerText="Nome" width="35%" sortBy="#{professor.nome}">
+						<h:outputText value="#{professor.nome}" />
+					</p:column>
+					<p:column headerText="CPF" width="20%">
+						<div align="center">
+							<h:outputText value="#{professor.cpf}" />
+						</div>
+					</p:column>
+					<p:column headerText="Salario" width="15%"
+						sortBy="#{professor.salario}">
+						<div align="center">
+							<h:outputText value="#{professor.salario}" />
+						</div>
+					</p:column>
+					<p:column headerText="Comandos" width="20%">
+						<div align="center">
+							<p:commandLink id="editar" action="#{professormb.editar(professor.id)}"
+								value="Editar" update="pesquisa" ajax="false" />
+							<h:outputText value=" " />
+							<p:commandLink id="excluir" action="#{professormb.excluir(professor.id)}"
+								value="Excluir" update="pesquisa" ajax="false" />
+						</div>
+					</p:column>
+				</p:dataTable>
+				<p:messages />
+			</h:form>
+		</p:panel>
+	</ui:define>
+</ui:composition>
