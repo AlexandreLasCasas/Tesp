@@ -13,6 +13,7 @@ import br.unibh.escola.entidades.Professor;
 @Stateless
 @LocalBean
 public class ServicoProfessor implements DAO<Professor, Long> {
+
 	@Inject
 	EntityManager em;
 	@Inject
@@ -47,7 +48,7 @@ public class ServicoProfessor implements DAO<Professor, Long> {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Professor> findAll() throws Exception {
-		log.info("Encontrando todos os professores");
+		log.info("Encontrando todos os alunos");
 		return em.createQuery("from Professor").getResultList();
 	}
 

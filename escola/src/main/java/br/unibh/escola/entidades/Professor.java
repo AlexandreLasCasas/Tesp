@@ -11,6 +11,9 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotNull;
 
 /**
  * Fun��o: Classe concreta de professor.
@@ -30,7 +33,10 @@ public class Professor extends Pessoa {
 	// variaveis de instancia, tipo especifico para calculos de valores financeiros.
 	
 	
-	@Column (name= "Salario", nullable= true, columnDefinition= "DECIMAL(14,2)")
+	@NotNull
+	@DecimalMin(value = "500.00")
+	@DecimalMax(value = "100000.00")
+	@Column(nullable=false)
 	private BigDecimal salario;
 	
 	public static Double BONUS = 0.1D;

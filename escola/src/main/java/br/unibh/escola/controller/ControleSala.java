@@ -1,5 +1,4 @@
 package br.unibh.escola.controller;
-
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -16,44 +15,24 @@ import br.unibh.escola.entidades.Sala;
 @ManagedBean(name = "salamb")
 @ViewScoped
 public class ControleSala {
+
 	@Inject
 	private Logger log;
+
 	@Inject
-	private ServicoSala sa;
+	private ServicoSala ss;
 	private Sala sala;
 	private String codArg;
+	private String nomeArg;
 	private List<Sala> salas;
+	private Long id;
 
-	
-	public Sala getSala() {
-		return sala;
-	}
-
-	public void setSala(Sala sala) {
-		this.sala = sala;
-	}
-
-	public void setSalas(List<Sala> salas) {
-		this.salas = salas;
-	}
-
-	public String getCodArg() {
-		return codArg;
-	}
-
-	public void setCodArg(String codArg) {
-		this.codArg = codArg;
-	}
-
-	public List<Sala> getSalas() {
-		return salas;
-	}
 
 	@PostConstruct
 	public void inicializaLista() {
 		log.info("Executando o MB de Sala");
 		try {
-			salas = sa.findAll();
+			salas = ss.findAll();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -63,23 +42,23 @@ public class ControleSala {
 		FacesMessage facesMsg;
 		try {
 			if (sala.getId() == null) {
-				sala = sa.insert(sala);
+				sala = ss.insert(sala);
 			} else {
-				sala = sa.update(sala);
+				sala = ss.update(sala);
 			}
-			salas = sa.findByName(codArg);
+			salas = ss.findByCod(codArg);
 		} catch (Exception e) {
 			facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro: " + e.getMessage(), "");
 			FacesContext.getCurrentInstance().addMessage("messagePanel", facesMsg);
 			return;
 		}
-		facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Sala gravado com sucesso!", "");
+		facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Aluno gravado com sucesso!", "");
 		FacesContext.getCurrentInstance().addMessage("messagePanel", facesMsg);
 	}
 
 	public void pesquisar() {
 		try {
-			salas = sa.findByName(codArg);
+			salas = ss.findByCod(codArg);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -93,9 +72,9 @@ public class ControleSala {
 		sala = null;
 	}
 
-	public void editar(Long id) {
+	public void editar() {
 		try {
-			sala = sa.find(id);
+			sala = ss.find(id);
 			return;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -103,11 +82,11 @@ public class ControleSala {
 		sala = null;
 	}
 
-	public void excluir(Long id) {
+	public void excluir() {
 		FacesMessage facesMsg;
 		try {
-			sa.delete(sa.find(id));
-			salas = sa.findByCod(codArg);
+			ss.delete(ss.find(id));
+			salas = ss.findByCod(codArg);
 		} catch (Exception e) {
 			e.printStackTrace();
 			facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro: " + e.getMessage(), "");
@@ -115,8 +94,55 @@ public class ControleSala {
 			return;
 		}
 		sala = null;
-		facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Sala excluído com sucesso!", "");
+		facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Sala excluída com sucesso!", "");
 		FacesContext.getCurrentInstance().addMessage("messagePanel", facesMsg);
-	}
-}
 
+	}
+	
+	
+	// getters e setters
+	
+	public Sala getSala() {
+		return sala;
+	}
+
+	public void setSala(Sala sala) {
+		this.sala = sala;
+	}
+
+	public String getNomeArg() {
+		return nomeArg;
+	}
+
+	public void setNomeArg(String nomeArg) {
+		this.nomeArg = nomeArg;
+	}
+
+	public List<Sala> getSalas() {
+		return salas;
+	}
+	
+	
+
+	public String getCodArg() {
+		return codArg;
+	}
+
+	public void setCodArg(String codArg) {
+		this.codArg = codArg;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	
+	
+	
+
+
+}

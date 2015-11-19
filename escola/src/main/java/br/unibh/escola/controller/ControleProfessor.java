@@ -1,6 +1,5 @@
 package br.unibh.escola.controller;
 
-
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -17,10 +16,12 @@ import br.unibh.escola.entidades.Professor;
 @ManagedBean(name = "professormb")
 @ViewScoped
 public class ControleProfessor {
+
 	@Inject
 	private Logger log;
+
 	@Inject
-	private ServicoProfessor sa;
+	private ServicoProfessor sp;
 	private Professor professor;
 	private String nomeArg;
 	private List<Professor> professores;
@@ -49,7 +50,7 @@ public class ControleProfessor {
 	public void inicializaLista() {
 		log.info("Executando o MB de Professor");
 		try {
-			professores = sa.findAll();
+			professores = sp.findAll();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -59,11 +60,11 @@ public class ControleProfessor {
 		FacesMessage facesMsg;
 		try {
 			if (professor.getId() == null) {
-				professor = sa.insert(professor);
+				professor = sp.insert(professor);
 			} else {
-				professor = sa.update(professor);
+				professor = sp.update(professor);
 			}
-			professores = sa.findByName(nomeArg);
+			professores = sp.findByName(nomeArg);
 		} catch (Exception e) {
 			facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro: " + e.getMessage(), "");
 			FacesContext.getCurrentInstance().addMessage("messagePanel", facesMsg);
@@ -75,7 +76,7 @@ public class ControleProfessor {
 
 	public void pesquisar() {
 		try {
-			professores = sa.findByName(nomeArg);
+			professores = sp.findByName(nomeArg);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -91,7 +92,7 @@ public class ControleProfessor {
 
 	public void editar(Long id) {
 		try {
-			professor = sa.find(id);
+			professor = sp.find(id);
 			return;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -102,8 +103,8 @@ public class ControleProfessor {
 	public void excluir(Long id) {
 		FacesMessage facesMsg;
 		try {
-			sa.delete(sa.find(id));
-			professores = sa.findByName(nomeArg);
+			sp.delete(sp.find(id));
+			professores = sp.findByName(nomeArg);
 		} catch (Exception e) {
 			e.printStackTrace();
 			facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro: " + e.getMessage(), "");
@@ -113,5 +114,7 @@ public class ControleProfessor {
 		professor = null;
 		facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Professor excluído com sucesso!", "");
 		FacesContext.getCurrentInstance().addMessage("messagePanel", facesMsg);
+
 	}
+
 }
