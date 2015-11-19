@@ -7,77 +7,197 @@
 	template="/WEB-INF/templates/default.xhtml">
 	<ui:define name="content">
 		<h:panelGroup id="cadastro">
-			<h:form id="cad" rendered="#{professormb.professor != null}">
-				<p:panel>
-					<h:outputText value="Cadastro de Professores"
-						style="font-size:18px;font-weight:bold" />
+			<h:form id="cad" rendered="#{disciplinamb.disciplina != null}">
+				<p:tabView>
+					<h:outputText value="Cadastro de Disciplinas"
+						style="fontsize:18px;font-weight:bold" />
 					<p:messages />
-					<p:panelGrid columns="3" styleClass="ui-noborder">
-						<p:outputLabel value="Nome " />
-						<p:inputText id="nome" value="#{professormb.professor.nome}" size="50" />
-						<p:message for="nome" errorClass="invalid" />
-						<p:outputLabel value="CPF " />
-						<p:inputText id="cpf" value="#{professormb.professor.cpf}" size="14" />
-						<p:message for="cpf" errorClass="invalid" />
-						<p:outputLabel value="Salário" />
-						<p:inputText id="salario" value="#{professormb.professor.salario}"
-							size="10" />
-						<p:message for="salario" errorClass="invalid" />
-					</p:panelGrid>
-					<p:commandButton id="gravar" action="#{professormb.gravar}"
-						value="Gravar" update="cadastro" ajax="false" />
-					<p:commandButton id="cancelar" action="#{professormb.cancelar}"
-						value="Cancelar" immediate="true" update="cadastro,pesquisa"
-						ajax="false" />
-				</p:panel>
+					<p:tab title="Gerals">
+						<p:panelGrid columns="3" styleClass="ui-noborder">
+							<p:outputLabel value="Nome " />
+							<p:inputText id="nome" value="#{disciplinamb.disciplina.nome}"
+								size="50" />
+							<p:message for="nome" errorClass="invalid" />
+							<p:outputLabel value="Curso " />
+							<p:inputText id="curso" value="#{disciplinamb.disciplina.curso}"
+								size="50" />
+							<p:message for="curso" errorClass="invalid" />
+							<p:outputLabel value="Carga Horária " />
+							<p:spinner id="cargahoraria"
+								value="#{disciplinamb.disciplina.cargaHoraria}" min="0"
+								max="160" />
+							<p:message for="cargahoraria" errorClass="invalid" />
+						</p:panelGrid>
+
+						<p:panelGrid columns="4" styleClass="ui-noborder">
+							<h:outputLabel value="Tipo " />
+							<p:selectOneRadio id="tipo" required="true"
+								value="#{disciplinamb.disciplina.tipo}">
+								<f:selectItem itemLabel="Presencial" itemValue="1" />
+								<f:selectItem itemLabel="A Distancia" itemValue="2" />
+								<f:selectItem itemLabel="Presencial e a distancia" itemValue="3" />
+							</p:selectOneRadio>
+							<p:message for="tipo" errorClass="invalid" />
+						</p:panelGrid>
+
+
+						<p:panelGrid columns="3" styleClass="ui-noborder">
+							<p:outputLabel value="Sala " />
+							<p:selectOneMenu id="sala" enableManualInput="true"
+								defaultLabel="digite para filtrar" converter="ConversorSala"
+								value="#{disciplinamb.disciplina.sala}">
+								<f:selectItems value="#{disciplinamb.listaSalas}" var="sala"
+									itemLabel="#{sala.codigo} (capacidade=#{sala.capacidade})"
+									itemValue="#{sala}" />
+							</p:selectOneMenu>
+							<p:message for="sala" errorClass="invalid" />
+
+							<p:outputLabel value="Professor " />
+							<p:selectOneMenu id="professor" enableManualInput="true"
+								defaultLabel="Comece a digitar..."
+								converter="ConversorProfessor"
+								value="#{disciplinamb.disciplina.professor}">
+								<f:selectItems value="#{disciplinamb.professores}"
+									var="professor" itemLabel="#{professor.nome}"
+									itemValue="#{professor}" />
+							</p:selectOneMenu>
+							<p:message for="professor" errorClass="invalid" />
+
+						</p:panelGrid>
+					</p:tab>
+
+					<p:tab title="Plano de Ensino">
+						<p:panelGrid columns="2" styleClass="ui-noborder">
+
+							<p:outputLabel value="Ementa " />
+							<h:form>
+								<p:panelGrid>
+									<p:inputTextarea id="ementa" cols="60"
+										value="#{disciplinamb.disciplina.ementa}" />
+									<p:message for="ementa" errorClass="invalid" />
+								</p:panelGrid>
+							</h:form>
+							<p:outputLabel value="Bibliografia " />
+							<p:panelGrid>
+								<p:inputTextarea id="bio" cols="60"
+									value="#{disciplinamb.disciplina.bibliografia}" />
+								<p:message for="bio" errorClass="invalid" />
+							</p:panelGrid>
+							<p:outputLabel value="Distribuição das Avaliações " />
+							<p:panelGrid>
+								<p:inputTextarea id="aval" cols="60"
+									value="#{disciplinamb.disciplina.distribuicaoAvaliacao}" />
+								<h:message for="aval" errorClass="invalid" />
+							</p:panelGrid>
+							<p:outputLabel value="Observação " />
+							<p:panelGrid>
+								<p:inputTextarea cols="60"
+									value="#{disciplinamb.disciplina.observacao}" />
+							</p:panelGrid>
+
+						</p:panelGrid>
+					</p:tab>
+
+					<p:tab title="Alunos">
+						<p:pickList id="alunos" value="#{disciplinamb.alunos}" var="aluno"
+							itemValue="#{aluno}" itemLabel="#{aluno}"
+							showSourceControls="true" showTargetControls="true"
+							converter="ConversorAluno">
+							<f:facet name="sourceCaption">Alunos disponíveis</f:facet>
+							<f:facet name="targetCaption">Alunos selecionados</f:facet>
+
+							<p:column style="width:75%;">
+								<h:outputText value="#{aluno.nome}" />
+							</p:column>
+
+						</p:pickList>
+					</p:tab>
+
+				</p:tabView>
+
+				<p:commandButton id="gravar" action="#{disciplinamb.gravar}"
+					value="Gravar" update="cadastro" ajax="false" />
+				<p:commandButton id="cancelar" action="#{disciplinamb.cancelar}"
+					value="Cancelar" immediate="true" update="cadastro,pesquisa"
+					ajax="false" />
+
 			</h:form>
 		</h:panelGroup>
-		<p:panel id="pesquisa" rendered="#{professormb.professor == null}">
-			<h:outputText value="Lista de Professores"
-				style="font-size:18px;font-weight:bold" />
+		<p:panel id="pesquisa" rendered="#{disciplinamb.disciplina == null}">
+			<h:outputText value="Lista de Disciplinas"
+				style="font-size:18px;fontweight:bold" />
 			<h:form id="arg">
 				<p:panelGrid columns="4" styleClass="ui-noborder">
 					<p:outputLabel value="Nome:" />
-					<p:inputText id="nomeArg" value="#{professormb.nomeArg}" />
-					<p:commandButton id="pesquisar" action="#{professormb.pesquisar}"
+					<p:inputText id="nome" value="#{disciplinamb.disciplinaNome}" />
+					<p:outputLabel value="Curso:" />
+					<p:inputText id="curso" value="#{disciplinamb.cursoNome}" />
+					<p:commandButton id="pesquisar" action="#{disciplinamb.pesquisar}"
 						value="Pesquisar" update="pesquisa" ajax="false" />
-					<p:commandButton id="novo" action="#{professormb.novo}" value="Novo"
-						update="pesquisa,cadastro" ajax="false" />
+					<p:commandButton id="novo" action="#{disciplinamb.novo}"
+						value="Novo" update="pesquisa,cadastro" ajax="false" />
 				</p:panelGrid>
 			</h:form>
-			<h:panelGroup rendered="#{empty professormb.professores}">
-				<h:outputText value="Nenhum professor existe" />
+			<h:panelGroup rendered="#{empty disciplinamb.disciplinas}">
+				<h:outputText value="Nenhuma disciplina existente" />
 			</h:panelGroup>
 			<h:form id="edt">
-				<p:dataTable id="tabela" var="professor" value="#{professormb.professores}"
-					rendered="#{not empty professormb.professores}"
-					onrowclick="selectRow('#{professor.id}')" paginator="true" rows="15">
-					<p:column headerText="Id" width="10%" sortBy="#{professor.id}">
+				<p:dataTable id="tabela" var="disciplina"
+					value="#{disciplinamb.disciplinas}"
+					rendered="#{not empty disciplinamb.disciplinas}"
+					onrowclick="selectRow('#{disciplina.id}')" paginator="true"
+					rows="15">
+					<p:column headerText="Id" width="10%" sortBy="#{aluno.id}">
 						<div align="center">
-							<h:outputText value="#{professor.id}" />
+							<h:outputText value="#{disciplina.id}" />
 						</div>
 					</p:column>
-					<p:column headerText="Nome" width="35%" sortBy="#{professor.nome}">
-						<h:outputText value="#{professor.nome}" />
+					<p:column headerText="Nome" width="35%" sortBy="#{disciplina.nome}">
+						<h:outputText value="#{disciplina.nome}" />
 					</p:column>
-					<p:column headerText="CPF" width="20%">
+					<p:column headerText="Curso" width="20%">
 						<div align="center">
-							<h:outputText value="#{professor.cpf}" />
+							<h:outputText value="#{disciplina.curso}" />
 						</div>
 					</p:column>
-					<p:column headerText="Salario" width="15%"
-						sortBy="#{professor.salario}">
+					<p:column headerText="Carga Horaria" width="15%">
 						<div align="center">
-							<h:outputText value="#{professor.salario}" />
+							<h:outputText value="#{disciplina.cargaHoraria}" />
+						</div>
+					</p:column>
+					<p:column headerText="Tipo" width="20%">
+						<div align="center">
+							<h:outputText value="#{disciplina.tipo}" />
+						</div>
+					</p:column>
+					<p:column headerText="Sala" width="20%">
+						<div align="center">
+							<h:outputText value="#{disciplina.sala.codigo}" />
+						</div>
+					</p:column>
+					<p:column headerText="Professor" width="20%">
+						<div align="center">
+							<h:outputText value="#{disciplina.professor.nome}" />
 						</div>
 					</p:column>
 					<p:column headerText="Comandos" width="20%">
 						<div align="center">
-							<p:commandLink id="editar" action="#{professormb.editar(professor.id)}"
-								value="Editar" update="pesquisa" ajax="false" />
+							<p:commandLink id="editar" action="#{disciplinamb.editar}"
+								value="Editar" update="pesquisa" ajax="false">
+								<f:setPropertyActionListener target="#{disciplinamb.id}"
+									value="#{disciplina.id}" />
+							</p:commandLink>
 							<h:outputText value=" " />
-							<p:commandLink id="excluir" action="#{professormb.excluir(professor.id)}"
-								value="Excluir" update="pesquisa" ajax="false" />
+							
+							
+							<p:commandLink id="excluir" action="#{disciplinamb.excluir}"
+								value="Excluir" update="pesquisa" ajax="false">
+								<f:setPropertyActionListener target="#{disciplinamb.id}"
+									value="#{disciplina.id}" />
+							</p:commandLink>
+							
+							
+
 						</div>
 					</p:column>
 				</p:dataTable>
