@@ -1,9 +1,12 @@
 package br.unibh.escola.entidades;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.PrimaryKeyJoinColumn;
@@ -35,6 +38,9 @@ public class Aluno extends Pessoa {
 	
 	@Column (name= "DataNascimento",nullable= true)
 	private Date dataAniversario;
+	
+	@ManyToMany(fetch = FetchType.LAZY, mappedBy="alunos")
+	private List<Disciplina> disciplinas;
 	
 	public Aluno(){}
 	
@@ -85,6 +91,16 @@ public class Aluno extends Pessoa {
 	 */
 	public void setDataAniversario(Date dataAniversario) {
 		this.dataAniversario = dataAniversario;
+	}
+	
+	
+
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
+	}
+
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
 
 	@Override

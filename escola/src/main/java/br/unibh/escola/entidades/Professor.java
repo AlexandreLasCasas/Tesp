@@ -41,7 +41,7 @@ public class Professor extends Pessoa {
 	
 	public static Double BONUS = 0.1D;
 	
-	@OneToMany(fetch=FetchType.EAGER, mappedBy="professor")
+	@OneToMany(fetch=FetchType.LAZY, mappedBy="professor")
 	private List<Disciplina> disciplinas;
 	
 	/**

@@ -77,7 +77,7 @@ public class Sala {
 	@Transient
 	private int ano;
 	
-	@OneToMany(fetch=FetchType.EAGER, mappedBy="sala")
+	@OneToMany(fetch=FetchType.LAZY, mappedBy="sala")
 	private List<Disciplina> disciplinas;
 	
 	public Sala (){}

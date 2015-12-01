@@ -24,12 +24,12 @@ public class ServicoDisciplina implements DAO<Disciplina, Long> {
 	@Override
 	public Disciplina insert(Disciplina t) throws Exception {
 		log.info("Persistindo " + t);
-		/*ArrayList<Aluno> lista = new ArrayList <Aluno>();
+		ArrayList<Aluno> lista = new ArrayList <Aluno>();
 		if (t.getAlunos() != null) {
 			for (Aluno a: t.getAlunos())
 				lista.add(em.merge(a));
 			t.setAlunos(lista);
-		}*/
+		}
 		em.persist(t);
 		return t;
 	}

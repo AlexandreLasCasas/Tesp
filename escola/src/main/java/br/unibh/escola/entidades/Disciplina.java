@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -66,15 +67,15 @@ public class Disciplina {
 	private String observacao;
 	
 	@NotNull
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Sala sala;
 	
 	@NotNull
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Professor professor;
 	
 	@NotNull
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "TB_DISCIPLINA_ALUNO", joinColumns = { @JoinColumn(name = "DISCIPLINA_ID", nullable=false, updatable=false) }, inverseJoinColumns = { @JoinColumn(name = "ALUNO_ID", nullable=false, updatable=false) })
 	private List<Aluno> alunos;
 	
